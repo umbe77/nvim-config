@@ -159,4 +159,20 @@ require("lazy").setup({
             require('lspsaga').setup({})
         end,
     },
+    {
+
+        "nvim-neo-tree/neo-tree.nvim",
+        version = "*",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+        },
+    },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
 }, {})
