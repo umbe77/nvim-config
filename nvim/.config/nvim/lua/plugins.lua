@@ -24,7 +24,7 @@ require("lazy").setup({
 
 			-- Useful status updates for LSP
 			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-			{ 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
+			{ 'j-hui/fidget.nvim',	     tag = 'legacy', opts = {} },
 
 			-- Additional lua configuration, makes nvim stuff amazing!
 			'folke/neodev.nvim',
@@ -102,7 +102,7 @@ require("lazy").setup({
 			{
 				'nvim-telescope/telescope-fzf-native.nvim',
 				-- NOTE: If you are having trouble with this installation,
-				--       refer to the README for telescope-fzf-native for more instructions.
+				--	 refer to the README for telescope-fzf-native for more instructions.
 				build = 'make',
 				cond = function()
 					return vim.fn.executable 'make' == 1
@@ -123,9 +123,5 @@ require("lazy").setup({
 		config = function()
 			require('lspsaga').setup({})
 		end,
-		dependencies = {
-			'nvim-treesitter/nvim-treesitter',
-			'nvim-tree/nvim-web-devicons',
-		}
 	},
 }, {})
