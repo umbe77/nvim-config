@@ -25,9 +25,9 @@ vim.o.termguicolors = true
 vim.o.cmdheight = 2
 
 --vim.cmd('set ts=4') -- Insert 2 spaces for a tab
-vim.bo.tabstop = 4
+--vim.bo.tabstop = 4
 --vim.cmd('set sw=4') -- Change the number of space characters inserted for indentation
-vim.bo.shiftwidth = 4
+--vim.bo.shiftwidth = 4
 vim.bo.smartindent = true
 vim.bo.expandtab = true
 
@@ -36,4 +36,3 @@ vim.wo.relativenumber = true
 vim.wo.wrap = true
 vim.wo.cursorline = true
 vim.wo.signcolumn = "yes"
-
