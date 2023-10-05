@@ -1,8 +1,8 @@
 # Configuration for my Neovim
 
-# Step
+## Step
 ```sh 
-$ git git@github.com:umbe77/nvim-config.git .nvim
-$ cd .nvim
-$ stow nvim
+git clone git@github.com:umbe77/nvim-config.git .nvim
+cd .nvim
+stow nvim
 ```
