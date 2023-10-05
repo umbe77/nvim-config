@@ -16,6 +16,12 @@ require("lazy").setup({
     { 'tpope/vim-sleuth' },
     { 'ryanoasis/vim-devicons' },
     {
+        "rcarriga/nvim-notify",
+        config = function()
+            require("notify").setup({})
+        end,
+    },
+    {
         -- LSP Configuration & Plugins
         'neovim/nvim-lspconfig',
         dependencies = {
@@ -130,6 +136,7 @@ require("lazy").setup({
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         dependencies = {
+            'nvim-telescope/telescope-ui-select.nvim',
             'nvim-lua/plenary.nvim',
             -- Fuzzy Finder Algorithm which requires local dependencies to be built.
             -- Only load if `make` is available. Make sure you have the system
@@ -174,5 +181,11 @@ require("lazy").setup({
         opts = {},
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    {
+        "karb94/neoscroll.nvim",
+        opts = {
+            respect_scrolloff = true,
+        },
     },
 }, {})

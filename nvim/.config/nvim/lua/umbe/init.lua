@@ -1,3 +1,6 @@
+require("umbe.telescope")
+require("umbe.gitignore")
+require("umbe.lualine")
 require("umbe.keymappings")
 require("umbe.explorer")
 require("umbe.git")

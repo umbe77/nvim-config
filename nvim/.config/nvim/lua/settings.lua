@@ -25,7 +25,7 @@ vim.o.termguicolors = true
 vim.o.cmdheight = 2
 
 vim.bo.smartindent = true
-vim.bo.expandtab = true
+--vim.bo.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 
