@@ -24,8 +24,8 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 vim.o.cmdheight = 2
 
-vim.bo.smartindent = true
-vim.bo.expandtab = true
+vim.o.smartindent = true
+vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 
@@ -36,6 +36,6 @@ vim.wo.cursorline = true
 vim.wo.signcolumn = "yes"
 
 vim.opt.list = true
+vim.opt.listchars = { eol = '↴', tab = "  " }
 -- vim.opt.listchars:append("space:⋅")
-vim.opt.listchars:append("eol:↴")
 

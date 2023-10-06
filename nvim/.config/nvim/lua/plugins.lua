@@ -17,9 +17,7 @@ require("lazy").setup({
     { 'ryanoasis/vim-devicons' },
     {
         "rcarriga/nvim-notify",
-        config = function()
-            require("notify").setup({})
-        end,
+        config = true,
     },
     {
         -- LSP Configuration & Plugins
@@ -86,8 +84,11 @@ require("lazy").setup({
     {
         "NeogitOrg/neogit",
         dependencies = {
-            'nvim-lua/plenary.nvim'
-        }
+            'nvim-lua/plenary.nvim',
+        },
+        config = function()
+            require("neogit").setup({})
+        end,
     },
     {
         -- Theme inspired by Atom
@@ -144,7 +145,7 @@ require("lazy").setup({
             {
                 'nvim-telescope/telescope-fzf-native.nvim',
                 -- NOTE: If you are having trouble with this installation,
-                --	 refer to the README for telescope-fzf-native for more instructions.
+                --   refer to the README for telescope-fzf-native for more instructions.
                 build = 'make',
                 cond = function()
                     return vim.fn.executable 'make' == 1

@@ -66,6 +66,7 @@ vim.api.nvim_set_keymap("x", "K", ":move '<-2<CR>gv-gv", { noremap = true, silen
 vim.api.nvim_set_keymap("x", "J", ":move '>+1<CR>gv-gv", { noremap = true, silent = true })
 
 -- Formatting with lsp
-vim.api.nvim_set_keymap("n", "<leader>kd", ":lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>kd", ":lua vim.lsp.buf.format({formatting_options = { tabSize = 4, insertSpaces = true }})<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
 
 

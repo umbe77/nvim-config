@@ -26,4 +26,3 @@ require('gitsigns').setup({
   end,
 })
 
-require("neogit").setup({})
