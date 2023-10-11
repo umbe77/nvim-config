@@ -8,6 +8,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 vim.keymap.set('n', '<leader>e', ':Oil<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>t', ':Neotree toggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'K', ':Lspsaga hover_doc<CR>', { noremap = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -67,6 +68,5 @@ vim.api.nvim_set_keymap("x", "J", ":move '>+1<CR>gv-gv", { noremap = true, silen
 
 -- Formatting with lsp
 vim.api.nvim_set_keymap("n", "<leader>kd", ":lua vim.lsp.buf.format({formatting_options = { tabSize = 4, insertSpaces = true }})<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
 

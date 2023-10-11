@@ -12,8 +12,94 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-
-    -- { 'tpope/vim-sleuth' },
+    'tpope/vim-dadbod',
+    'kristijanhusak/vim-dadbod-ui',
+    'kristijanhusak/vim-dadbod-completion',
+    {
+        "tpope/vim-dadbod",
+        opt = true,
+        requires = {
+            "kristijanhusak/vim-dadbod-ui",
+            "kristijanhusak/vim-dadbod-completion",
+        },
+        config = function()
+            require("umbe.dadbod").setup()
+        end,
+    },
+    {
+        'kristijanhusak/vim-dadbod-ui',
+        dependencies = {
+            { 'tpope/vim-dadbod',                     lazy = true },
+            { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
+        },
+        cmd = {
+            'DBUI',
+            'DBUIToggle',
+            'DBUIAddConnection',
+            'DBUIFindBuffer',
+        },
+        init = function()
+            -- Your DBUI configuration
+            vim.g.db_ui_use_nerd_fonts = 1
+        end,
+    },
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+            -- add any options here
+            lsp = {
+                -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+                override = {
+                    ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+                    ["vim.lsp.util.stylize_markdown"] = true,
+                    ["cmp.entry.get_documentation"] = true,
+                },
+            },
+            views = {
+                cmdline_popup = {
+                    position = {
+                        row = 6,
+                        col = "50%",
+                    },
+                    size = {
+                        width = 60,
+                        height = "auto",
+                    },
+                },
+                popupmenu = {
+                    relative = "editor",
+                    position = {
+                        row = 8,
+                        col = "50%",
+                    },
+                    size = {
+                        width = 60,
+                        height = 10,
+                    },
+                    border = {
+                        style = "rounded",
+                        padding = { 0, 1 },
+                    },
+                    win_options = {
+                        winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+                    },
+                },
+            },
+            presets = {
+                bottom_search = true,
+                -- command_palette = true,
+            },
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            "rcarriga/nvim-notify",
+        }
+    },
     { 'ryanoasis/vim-devicons' },
     {
         "rcarriga/nvim-notify",
