@@ -82,6 +82,9 @@ require("lazy").setup({
         },
     },
     {
+        "github/copilot.vim",
+    },
+    {
         "NeogitOrg/neogit",
         dependencies = {
             'nvim-lua/plenary.nvim',
