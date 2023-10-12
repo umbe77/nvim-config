@@ -282,4 +282,5 @@ require("lazy").setup({
             respect_scrolloff = true,
         },
     },
+    { import = "umbe.plugins" },
 }, {})
