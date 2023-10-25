@@ -153,6 +153,20 @@ require("lazy").setup({
         },
     },
     {
+        "github/copilot.vim",
+        init = function()
+            vim.g.copilot_no_tab_map = true
+        end,
+        config = function()
+            vim.keymap.set('i', '<C-J>', [[copilot#Accept()]], {
+                silent = true,
+                expr = true,
+                script = true,
+                replace_keycodes = false,
+            })
+        end,
+    },
+    {
         -- Autocompletion
         'hrsh7th/nvim-cmp',
         dependencies = {
@@ -166,9 +180,6 @@ require("lazy").setup({
             -- Adds a number of user-friendly snippets
             'rafamadriz/friendly-snippets',
         },
-    },
-    {
-        "github/copilot.vim",
     },
     {
         "NeogitOrg/neogit",
