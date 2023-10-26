@@ -125,7 +125,8 @@ local gitignore_files = function(opts)
 end
 
 function M.setup()
-	vim.cmd('command GitIgnore lua require"gitignore".run()')
+    vim.api.nvim_create_user_command("GitIgnore", function () gitignore_files() end, {})
+	-- vim.cmd('command GitIgnore lua require"gitignore".run()')
 end
 
 function M.run()
