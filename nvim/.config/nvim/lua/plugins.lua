@@ -185,9 +185,15 @@ require("lazy").setup({
         "NeogitOrg/neogit",
         dependencies = {
             'nvim-lua/plenary.nvim',
+            'sindrets/diffview.nvim',
         },
         config = function()
-            require("neogit").setup({})
+            require("neogit").setup({
+                integrations = {
+                    diffview = true,
+                    telescope = true,
+                },
+            })
         end,
     },
     {
@@ -198,7 +204,12 @@ require("lazy").setup({
             local onedark = require('onedark')
             onedark.setup({
                 style = 'darker',
-                toggle_style_key = '<nop>',
+                code_style = {
+                    comments = 'italic',
+                    keywords = 'italic',
+                    functions = 'italic',
+                    strings = 'italic',
+                },
             })
             onedark.load()
         end,
@@ -215,7 +226,7 @@ require("lazy").setup({
         -- See `:help lualine.txt`
         opts = {
             options = {
-                icons_enabled = false,
+                icons_enabled = true,
                 theme = 'onedark',
                 component_separators = '|',
                 section_separators = '',
