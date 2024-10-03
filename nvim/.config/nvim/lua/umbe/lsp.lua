@@ -47,7 +47,7 @@ local servers = {
     marksman = {},
     -- pyright = {},
     -- rust_analyzer = {},
-    tsserver = {},
+    ts_ls = {},
     julials = {},
     html = { filetypes = { 'html', 'twig', 'hbs' } },
 
@@ -55,6 +55,17 @@ local servers = {
         Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },
+            diagnostics = {
+                globals = {
+                    "awesome"
+                },
+            },
+        },
+    },
+    als = {
+        ada = {
+            projectFile = "project.gpt",
+            scenarioVariables = { ... },
         },
     },
 }

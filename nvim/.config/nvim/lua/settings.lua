@@ -10,7 +10,7 @@ vim.o.hlsearch = false
 
 vim.o.undofile = true
 vim.o.clipboard = "unnamedplus"
-vim.o.showtabline = false
+vim.o.showtabline = 0
 vim.o.showmode = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
