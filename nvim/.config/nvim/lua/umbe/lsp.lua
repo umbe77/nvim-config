@@ -62,7 +62,7 @@ local servers = {
             },
         },
     },
-    als = {
+    ada_ls = {
         ada = {
             projectFile = "project.gpt",
             scenarioVariables = { ... },
