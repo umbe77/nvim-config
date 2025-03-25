@@ -1,4 +1,1 @@
-require("settings")
-require("plugins")
-require("umbe")
-
+require("umbe.lazy")
