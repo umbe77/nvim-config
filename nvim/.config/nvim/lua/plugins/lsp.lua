@@ -88,6 +88,9 @@ return {
 				-- or a suggestion from your LSP for this to activate.
 				map("<leader>ca", require("fzf-lua").lsp_code_actions, "[C]ode [A]ction", { "n", "x" })
 
+				map("<leader>gb", require("fzf-lua").git_branches, "[G]it [B]ranches")
+				map("<leader>ff", require("fzf-lua").builtin, "[G]it [B]ranches")
+
 				-- WARN: This is not Goto Definition, this is Goto Declaration.
 				--  For example, in C this would take you to the header.
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
