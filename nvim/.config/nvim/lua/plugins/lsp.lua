@@ -215,6 +215,8 @@ return {
 			html = { filetypes = { "html", "twig", "hbs" } },
 			bashls = {},
 
+			azure_pipelines_ls = {},
+
 			lua_ls = {
 				-- cmd = { ... },
 				-- filetypes = { ... },
