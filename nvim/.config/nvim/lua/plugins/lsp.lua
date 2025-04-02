@@ -227,6 +227,7 @@ return {
 					},
 				},
 			},
+			azure_pipelines_ls = {},
 			lua_ls = {
 				-- cmd = { ... },
 				-- filetypes = { ... },
