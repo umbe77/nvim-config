@@ -215,6 +215,18 @@ return {
 			html = { filetypes = { "html", "twig", "hbs" } },
 			bashls = {},
 
+			omnisharp = {
+				settings = {
+					FormattingOptions = {
+						EnableEditorConfigSupport = true,
+						OrganizeImports = true,
+					},
+					RoslynExtensionsOptions = {
+						EnableAnalyzersSupport = true,
+						EnableImportCompletion = true,
+					},
+				},
+			},
 			lua_ls = {
 				-- cmd = { ... },
 				-- filetypes = { ... },
